@@ -8,7 +8,7 @@ var Stack = function(){
 
   // Implement the methods below
   someInstance.push = function(value){
-    var key = storage.end;
+      var key = storage.end;
     storage[key] = value;
     storage.end += 1;
   };
