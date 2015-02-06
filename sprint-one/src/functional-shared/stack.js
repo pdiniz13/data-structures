@@ -5,7 +5,7 @@ var Stack = function() {
     end:0
   };
   _.extend(someInstance, stackMethods);
-  return someInstance
+  return someInstance;
 };
 
 var stackMethods = {
