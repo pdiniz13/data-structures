@@ -1,3 +1,8 @@
+/**
+ *
+ * @param value
+ * @constructor
+ */
 var BinarySearchTree = function(value){
   this.left = null;
   this.right = null;
@@ -5,6 +10,11 @@ var BinarySearchTree = function(value){
   this.parent = null;
 };
 
+/**
+ *
+ * @param value
+ * Creates an insert method for BinarySearchTree
+ */
 BinarySearchTree.prototype.insert = function(value){
   if(this.value > value){
     if(this.left === null){
@@ -21,6 +31,12 @@ BinarySearchTree.prototype.insert = function(value){
   }
 };
 
+/**
+ *
+ * @param value
+ * @returns {boolean}
+ * Creates a contains method for BinarySearchTree
+ */
 BinarySearchTree.prototype.contains = function(value){
   var bool = false;
   this.depthFirstLog(function(position){
@@ -31,6 +47,11 @@ BinarySearchTree.prototype.contains = function(value){
   return bool;
 };
 
+/**
+ *
+ * @param cb
+ * Creates a depthFirstLog for BinarySearchTree
+ */
 BinarySearchTree.prototype.depthFirstLog = function(cb){
   cb(this.value);
   if(this.left !== null){
