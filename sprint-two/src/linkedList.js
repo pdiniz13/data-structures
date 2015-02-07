@@ -1,8 +1,18 @@
+/**
+ *
+ * @returns {{}}
+ * @constructor
+ */
 var LinkedList = function(){
   var list = {};
   list.head = null;
   list.tail = null;
 
+  /**
+   *
+   * @param value
+   * Added addToTail to LinkedList
+   */
   list.addToTail = function(value) {
     var newNode = Node(value);
     if(list.head === null){
@@ -14,12 +24,23 @@ var LinkedList = function(){
     }
   };
 
+  /**
+   *
+   * @returns {*}
+   * Added removeHead to LinkedList
+   */
   list.removeHead = function(){
     var returnValue = list.head.value;
     list.head = list.head.next;
     return returnValue;
   };
 
+  /**
+   *
+   * @param target
+   * @returns {boolean}
+   * Added contains to LinkedList
+   */
   list.contains = function(target){
     var current = list.head;
     var bool = false;
@@ -35,6 +56,12 @@ var LinkedList = function(){
   return list;
 };
 
+/**
+ *
+ * @param value
+ * @returns {{}}
+ * @constructor
+ */
 var Node = function(value){
   var node = {};
 

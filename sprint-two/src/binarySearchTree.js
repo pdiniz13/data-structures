@@ -35,7 +35,7 @@ BinarySearchTree.prototype.insert = function(value){
  *
  * @param value
  * @returns {boolean}
- * Creates a contains method for BinarySearchTree
+ * Creates a contains method for BinarySearchTree;
  */
 BinarySearchTree.prototype.contains = function(value){
   var bool = false;
