@@ -1,3 +1,8 @@
+/**
+ *
+ * @returns {{start: number, end: number}}
+ * @constructor
+ */
 var Queue = function (){
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
@@ -8,7 +13,11 @@ var Queue = function (){
   _.extend(instance, queueMethods);
   return instance;
 };
-
+/**
+ *
+ * @type {{enqueue: Function, dequeue: Function, size: Function}}
+ * Creates methods for the Queue constructor
+ */
 var queueMethods = {
   enqueue: function(value){
     this[this.end++] = value;

@@ -1,3 +1,8 @@
+/**
+ *
+ * @returns {{end: number}}
+ * @constructor
+ */
 var Stack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
@@ -7,7 +12,11 @@ var Stack = function() {
   _.extend(someInstance, stackMethods);
   return someInstance;
 };
-
+/**
+ *
+ * @type {{push: Function, pop: Function, size: Function}}
+ * Creates methods for the Stack constructor
+ */
 var stackMethods = {
   push: function(value){
     this[this.end++] = value;
