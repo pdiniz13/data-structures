@@ -41,29 +41,6 @@ HashTable.prototype.insert = function(k, v){
 };
 
 
-//HashTable.prototype.insert = function(k, v){
-//  var i = getIndexBelowMaxForKey(k, this._limit);
-//  if(this._storage.get(i) !== null && this._storage.get(i) !== undefined){
-//    if(this._storage.get(i+1) !== null && this._storage.get(i+1) !== undefined){
-//      this._limit = this._limit * 2;
-//      var _tempStorage = LimitedArray(this._limit);
-//      for (var i = 0, count = this._storage.length; i < count; i++) {
-//        var key = this._storage.get(i)[0];
-//        var value = this._storage.get(i)[1];
-//        var index = getIndexBelowMaxForKey(key, this._limit);
-//        _tempStorage.set(index, [key, value]);
-//      }
-//      this._storage = _tempStorage;
-//    } else {
-//      this._storage.set(i+1, [k,v]);
-//    }
-//  } else {
-//    this._storage.set(i, [k, v]);
-//  }
-//};
-
-
-
 /**
  *
  * @param k
@@ -124,6 +101,7 @@ HashTable.prototype.reset = function(){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * retrieve, remove, insert are constant, and is linear if there is collision. reset is exponent.
  */
 
 

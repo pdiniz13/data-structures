@@ -38,13 +38,19 @@ BinarySearchTree.prototype.insert = function(value){
  * Creates a contains method for BinarySearchTree;
  */
 BinarySearchTree.prototype.contains = function(value){
-  var bool = false;
-  this.depthFirstLog(function(position){
-    if(position === value){
-      bool = true;
+  if(this.value === value){
+    return true;
+  } else if(this.value > value){
+    if(this.left){
+      return this.left.contains(value);
     }
-  });
-  return bool;
+    return false;
+  } else {
+    if(this.right) {
+      return this.right.contains(value);
+    }
+    return false;
+  }
 };
 
 /**
@@ -64,4 +70,5 @@ BinarySearchTree.prototype.depthFirstLog = function(cb){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * insert and contains are logarithmic, depthfirstlog is linear
  */
